@@ -6,14 +6,15 @@ console.log(h1);
 h1.innerText = 'Hello';
 
 function handleHelloClick() {
-  const currentColor = h1.style.color;
-  let newColor;
-  if (currentColor != 'blue') {
-    newColor = 'blue';
+  const clickedClass = 'active';
+  // 이렇게 사용할 경우 오타가 났을경우 에러로 식별할 수 있는 가능한 수준까지 피드백을 얻을 수 있다.
+  if (h1.className === clickedClass) {
+    h1.className = '';
   } else {
-    newColor = 'tomato';
-  }
-  h1.style.color = newColor;
+    h1.className = clickedClass;
+  } // 현재 element에 달린 claasName까지 사라지는 문제가 있음 다음시간에 수정
+
+  // h1.classList.toggle(clickedClass);
 }
 
 // hello.onclick = handleHelloClick;

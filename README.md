@@ -36,3 +36,7 @@ removeEventListener로 제거 할 수 있다.
 
 그 외에 많은 것들을 부착할수 있다.
 window 기준 ex) copy online offline resize 등..
+
+## className
+
+className은 getter이면서 동시에 setter이다.
