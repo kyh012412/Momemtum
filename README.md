@@ -40,3 +40,21 @@ window 기준 ex) copy online offline resize 등..
 ## className
 
 className은 getter이면서 동시에 setter이다.
+
+## classList
+
+[classList 참조문서](https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList)
+
+```js
+if (h1.classList.contains(clickedClass)) {
+  h1.classList.remove(clickedClass);
+} else {
+  h1.classList.add(clickedClass);
+}
+```
+
+는 다음 한 줄과 같은 기능을 한다.
+
+```js
+h1.classList.toggle(clickedClass);
+```
