@@ -58,3 +58,17 @@ if (h1.classList.contains(clickedClass)) {
 ```js
 h1.classList.toggle(clickedClass);
 ```
+
+## form 속성
+
+```html
+<form class="" id="login-form">
+  <input required maxlength="15" type="text" placeholder="What is your name?" />
+  <button>Log In</button>
+</form>
+```
+
+다음처럼 어느정도 유효성검사를 할 수 있다.
+ex) required, maxlength
+
+하지만 개발자 도구에서 값이 수정이 가능하다.

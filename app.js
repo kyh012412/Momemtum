@@ -4,9 +4,20 @@ const loginInput = loginForm.querySelector('input');
 const loginButton = loginForm.querySelector('button');
 
 loginButton.addEventListener('click', () => {
+  const username = loginInput.value;
+
+  // 유효성 검사는 유저를 믿지 말고 꼭 하는 것이 좋음
+  if (username === '') {
+    console.log('please write your name');
+    return;
+  } else if (username.length > 15) {
+    console.log('Your name is too long.');
+    return;
+  }
+
   console.dir(loginInput);
-  console.log('hello', loginInput.value);
-  loginInput.value = '';
+  console.log('hello', username);
+  // loginInput.value = '';
 });
 
 // loginInput.addEventListener('keypress', (e) => {
