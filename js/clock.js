@@ -2,7 +2,7 @@ const clock = document.querySelector('h2#clock');
 
 function getClock() {
   const date = new Date();
-  const Hours = setLong(date.getHours());
+  const Hours = String(date.getHours()).padStart(2, '0');
   const Minutes = setLong(date.getMinutes());
   const Seconds = setLong(date.getSeconds());
   clock.innerHTML = `${Hours}:${Minutes}:${Seconds}`;
