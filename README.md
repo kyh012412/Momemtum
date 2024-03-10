@@ -154,3 +154,10 @@ ex)
 '1'.padEnd(2, '0'); //returned "10"
 //문자열이 2자리보다 작다면 뒤에 "0"을채워서 만들어준다.
 ```
+
+### 6.0 Quote
+
+Math.random()
+Math.floor()
+Math.round()
+Math.ceil()
