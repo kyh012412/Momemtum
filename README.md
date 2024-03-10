@@ -72,3 +72,15 @@ h1.classList.toggle(clickedClass);
 ex) required, maxlength
 
 하지만 개발자 도구에서 값이 수정이 가능하다.
+
+#### 4.2
+
+```js
+// form의 submit이 발생하는 조건은 엔터를 누르거나 button이 눌릴때 발생함
+loginForm.addEventListener('submit', onLoginBtnClick);
+
+// 여기에서 콜백함수에는 ()를 붙여주지 않는다. 그것은 이곳에서 죽시 실행한다는 뜻이기 때문이다.
+// loginForm.addEventListener('submit', onLoginBtnClick());
+
+// 정상적으로 작동은 하지만 browser가 form 이 submit 될때 refresh하도록 되어 있음
+```

@@ -1,30 +1,19 @@
 const loginForm = document.querySelector('#login-form');
-// loginForm은 htmlElement 이기 때문에 여기에서부터 찾을 수 있다.
 const loginInput = loginForm.querySelector('input');
-const loginButton = loginForm.querySelector('button');
 
-loginButton.addEventListener('click', () => {
+function onLoginBtnClick(event) {
+  event.preventDefault();
   const username = loginInput.value;
+  console.log(event);
+  console.log(username);
+}
 
-  // 유효성 검사는 유저를 믿지 말고 꼭 하는 것이 좋음
-  if (username === '') {
-    console.log('please write your name');
-    return;
-  } else if (username.length > 15) {
-    console.log('Your name is too long.');
-    return;
-  }
+// form의 submit이 발생하는 조건은 엔터를 누르거나 button이 눌릴때 발생함
+loginForm.addEventListener('submit', onLoginBtnClick);
 
-  console.dir(loginInput);
-  console.log('hello', username);
-  // loginInput.value = '';
-});
+// 여기에서 콜백함수에는 ()를 붙여주지 않는다. 그것은 이곳에서 죽시 실행한다는 뜻이기 때문이다.
+// loginForm.addEventListener('submit', onLoginBtnClick());
 
-// loginInput.addEventListener('keypress', (e) => {
-//   if (e.key != 'Enter') {
-//     console.log('pressed key is not enter', e.key);
-//     return;
-//   }
-//   console.log(e.key);
-//   loginButton.click();
-// });
+// 정상적으로 작동은 하지만 browser가 form 이 submit 될때 refresh하도록 되어 있음
+
+//모든 EventListener function의 첫번째 argument는 항상 방금일어난 정보를 지닌다.
