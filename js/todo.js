@@ -26,6 +26,7 @@ function deleteToDo(e) {
   const li = e.currentTarget.parentElement;
   console.dir(li);
   const span = li.querySelector('span');
+  console.log(span);
   li.remove();
 }
 
@@ -41,7 +42,12 @@ function handleToDoSubmit(event) {
 toDoForm.addEventListener('submit', handleToDoSubmit);
 
 window.onload = () => {
-  JSON.parse(localStorage.getItem('toDos')).forEach((todo) => {
-    paintToDo(todo);
-  });
+  const savedToDos = localStorage.getItem('toDos');
+  if (savedToDos) {
+    const parsedToDos = JSON.parse(savedToDos);
+    parsedToDos.forEach((todo) => {
+      paintToDo(todo);
+      toDos.push(todo);
+    });
+  }
 };

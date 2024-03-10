@@ -168,3 +168,5 @@ localStorage에는 Array를 저장할 수 없다.
 localStorage only can save text;
 
 JavaScript Object나 Array나 어떤 것이든 String으로 바꿔주는 기능
+Object or Array To String JSON.stringify()
+String To Object or Array JSON.parse()
