@@ -170,3 +170,21 @@ localStorage only can save text;
 JavaScript Object나 Array나 어떤 것이든 String으로 바꿔주는 기능
 Object or Array To String JSON.stringify()
 String To Object or Array JSON.parse()
+
+### 8.0 Geolocation
+
+```js
+navigator.geolocation.getCurrentPosition();
+```
+
+위 함수는 2개의 매개변수를 받는데
+첫 번째는 성공일 경우 실행할 콜백함수이며
+두 번째 매개변수는 에러일경우에 실행항 콜백함수이다.
+세 번째 매개변수는 다음 항목을 포함하는 객체이여야만한다.
+key : maximumAge 이값에 0을 주면 캐시를 사용하지않고 항상 실시간 위치로 반환
+Infinity의 경우 항상 캐시에 저장된 정보를 반환해야하함
+enableHighAccuracy 전력을 많이써서 더 고성능을 낼수있음 (default:false);
+
+[Geolocation 참조문서](https://developer.mozilla.org/ko/docs/Web/API/Geolocation/getCurrentPosition)
+
+[날씨 참조api 사이트](https://www.openweathermap.org)
