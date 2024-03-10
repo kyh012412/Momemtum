@@ -28,7 +28,8 @@ function paintToDo(newTodoObj) {
 
 function deleteToDo(e) {
   const li = e.currentTarget.parentElement;
-  toDos.filter((todoObject) => todoObject.id !== li.id);
+  toDos = toDos.filter((todoObject) => todoObject.id !== li.id);
+  localStorage.setItem(TODOS_KEY, toDos);
 }
 
 function handleToDoSubmit(event) {
