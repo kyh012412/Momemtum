@@ -125,3 +125,8 @@ localStorage.removeItem(key);
 ```
 
 정의되있지 않은 키로 set를 하려고하면 null이 나온다.
+
+#### 5.0 setInterval
+
+setInterval 은 두 개의 매개변수를 받는다.
+실행하고자 하는 함수 , 실행할 간격

@@ -12,6 +12,7 @@ window.onload = () => {
     paintGreetings(savedUsername);
   } else {
     loginForm.classList.remove(HIDDEN_CLASSNAME);
+    loginForm.addEventListener('submit', onLoginBtnClick);
   }
 };
 
@@ -24,8 +25,6 @@ function onLoginBtnClick(event) {
   localStorage.setItem(USERNAME_KEY, username);
   paintGreetings(username);
 }
-
-loginForm.addEventListener('submit', onLoginBtnClick);
 
 const paintGreetings = (username) => {
   // greeting.innerHTML = 'Hello ' + username;
