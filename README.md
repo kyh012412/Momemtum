@@ -188,3 +188,6 @@ enableHighAccuracy 전력을 많이써서 더 고성능을 낼수있음 (default
 [Geolocation 참조문서](https://developer.mozilla.org/ko/docs/Web/API/Geolocation/getCurrentPosition)
 
 [날씨 참조api 사이트](https://www.openweathermap.org)
+
+lat와 lng을 써서 날씨정보 알아오기
+[날씨 참조api 사이트](https://www.openweathermap.org/current)
