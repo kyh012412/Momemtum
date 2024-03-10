@@ -28,8 +28,11 @@ function paintToDo(newTodoObj) {
 
 function deleteToDo(e) {
   const li = e.currentTarget.parentElement;
-  toDos = toDos.filter((todoObject) => todoObject.id !== li.id);
-  localStorage.setItem(TODOS_KEY, toDos);
+  //li.id는 String임을 유의
+  toDos = toDos.filter((todoObject) => todoObject.id !== parseInt(li.id));
+  console.log(li.id);
+  savedToDos();
+  li.remove();
 }
 
 function handleToDoSubmit(event) {
@@ -62,5 +65,5 @@ window.onload = () => {
 console.dir(window);
 
 window.onbeforeunload = () => {
-  localStorage.setItem(TODOS_KEY, toDos);
+  savedToDos();
 };
