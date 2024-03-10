@@ -84,3 +84,12 @@ loginForm.addEventListener('submit', onLoginBtnClick);
 
 // 정상적으로 작동은 하지만 browser가 form 이 submit 될때 refresh하도록 되어 있음
 ```
+
+#### 4.4
+
+```js
+greeting.innerHTML = 'Hello ' + username;
+greeting.innerHTML = `Hello +${username}`;
+```
+
+위 두 가지 방법은 똑같은 결과를 낸다.

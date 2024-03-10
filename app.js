@@ -1,22 +1,19 @@
 const loginForm = document.querySelector('#login-form');
 const loginInput = loginForm.querySelector('input');
+const greeting = document.querySelector('#greeting');
 
-const link = document.querySelector('a');
+// 대문자로 표현한 상수는 String을 주로 저장함
+const HIDDEN_CLASSNAME = 'hidden';
 
 function onLoginBtnClick(event) {
   event.preventDefault();
+  loginForm.classList.add(HIDDEN_CLASSNAME);
+
   const username = loginInput.value;
-  console.log(event);
   console.log(username);
+  // greeting.innerHTML = 'Hello ' + username;
+  greeting.innerHTML = `Hello +${username}`;
+  greeting.classList.toggle(HIDDEN_CLASSNAME);
 }
 
 loginForm.addEventListener('submit', onLoginBtnClick);
-
-function handleLinkClick(event) {
-  console.dir(event);
-  // alert('clicked'); //alert를 사용하면 모든 js를 막음
-  event.preventDefault();
-}
-
-link.addEventListener('click', handleLinkClick);
-// 뒤에 함수에 javascript가 필요한 정보를 자동으로 넣어준다.(ex event)
