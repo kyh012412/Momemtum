@@ -93,3 +93,35 @@ greeting.innerHTML = `Hello +${username}`;
 ```
 
 위 두 가지 방법은 똑같은 결과를 낸다.
+
+#### 4.5
+
+##### localStorage
+
+```js
+localStorage; // 이미 있음
+```
+
+[localStroage 참조문서](https://developer.mozilla.org/en-US/docs/Web/API/window/localStorage)
+
+- setItem()
+
+```js
+localStorage.setItem('key', 'value');
+// 이 방법으로 같은 키값에 덮어쓰기하면 키에 해당하는 value를 덮어쓰기를 할 수 있다.
+```
+
+- getItem()
+
+```js
+const value = localStorage.getItem('key');
+```
+
+- removeItem()
+
+```js
+const key = 'something that already set';
+localStorage.removeItem(key);
+```
+
+정의되있지 않은 키로 set를 하려고하면 null이 나온다.

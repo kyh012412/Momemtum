@@ -11,9 +11,21 @@ function onLoginBtnClick(event) {
 
   const username = loginInput.value;
   console.log(username);
-  // greeting.innerHTML = 'Hello ' + username;
-  greeting.innerHTML = `Hello +${username}`;
-  greeting.classList.toggle(HIDDEN_CLASSNAME);
+  localStorage.setItem('username', username);
+  setUsername(username);
 }
 
 loginForm.addEventListener('submit', onLoginBtnClick);
+
+window.onload = () => {
+  const username = localStorage.getItem('username');
+  if (username) {
+    setUsername(username);
+  }
+};
+
+const setUsername = (username) => {
+  // greeting.innerHTML = 'Hello ' + username;
+  greeting.innerHTML = `Hello ${username}`;
+  greeting.classList.toggle(HIDDEN_CLASSNAME);
+};
