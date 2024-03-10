@@ -161,3 +161,10 @@ Math.random()
 Math.floor()
 Math.round()
 Math.ceil()
+
+### 7.3
+
+localStorage에는 Array를 저장할 수 없다.
+localStorage only can save text;
+
+JavaScript Object나 Array나 어떤 것이든 String으로 바꿔주는 기능
